@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadfqap6517-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadfqap6517-tenant-component
+    app.kubernetes.io/part-of: loadfqap6517-tenant-app
+  name: loadfqap6517-tenant-component
+  namespace: loadfqap6517-tenant
+spec:
+  ports:
+  - port: 8081
+    targetPort: 8081
+  selector:
+    app.kubernetes.io/instance: loadfqap6517-tenant-component
+status:
+  loadBalancer: {}
